@@ -169,7 +169,7 @@ class NestAPI():
 
     def _map_nest_protect_state(self, value):
         if value == 0:
-            return "Ok"
+            return "OK"
         elif value == 1 or value == 2:
             return "Warning"
         elif value == 3:
