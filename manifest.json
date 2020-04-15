@@ -4,8 +4,6 @@
   "documentation": "https://github.com/mastermc0/badnest",
   "dependencies": [],
   "codeowners": [
-    "@USA-RedDragon",
-    "@vinodmishra",
     "@mastermc0"
   ],
   "homeassistant": "0.97.0",
