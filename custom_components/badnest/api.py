@@ -196,7 +196,7 @@ class NestAPI():
             r = self._session.get(url=f"{CAMERA_WEBAPI_BASE}/api/cameras."
                                   + "get_with_properties"
                                   , params= {
-                                            "uuid": self.device_data[camera]['uuid'],
+                                            "uuid": self.device_data[camera]['uuid']
                                             }
                                   , headers=headers)
             sensor_data = r.json()["items"]
