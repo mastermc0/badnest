@@ -65,7 +65,7 @@ class NestCamera(Camera):
     @property
     def is_on(self):
         """Return true if on."""
-        return self._device.device_data[self._uuid]['is_online'] and self._device.device_data[self._uuid]['is_streaming']
+        return self._device.device_data[self._uuid]['is_streaming']
 
     @property
     def is_recording(self):
@@ -74,12 +74,10 @@ class NestCamera(Camera):
 
     def turn_off(self):
         self._device.camera_turn_off(self._uuid)
-        self._device.is_streaming = False
         self.schedule_update_ha_state()
 
     def turn_on(self):
         self._device.camera_turn_on(self._uuid)
-        self._device.is_streaming = True
         self.schedule_update_ha_state()
 
     @property
