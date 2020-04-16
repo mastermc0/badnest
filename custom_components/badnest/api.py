@@ -193,7 +193,7 @@ class NestAPI():
                 'Referer': 'https://home.nest.com/',
                 'cookie': f"cztoken={self._access_token}"
             }
-            r = self._session.get(url=f"{CAMERA_WEBAPI_BASE}/api/cameras.get_with_properties?uuid={camera}"                                  
+            r = self._session.get(url=f"{CAMERA_WEBAPI_BASE}/api/cameras.get_with_properties?uuid="+camera                                  
                                   , headers=headers)
             sensor_data = r.json()["items"][0]
             self.device_data[camera]['name'] = \
