@@ -476,7 +476,7 @@ class NestAPI():
                 'Referer': 'https://home.nest.com/',
                 'cookie': f"user_token={self._access_token}"
             }
-            r = self._session.get(url=f"{CAMERA_WEBAPI_BASE}/api/dropcams.set_properties",
+            r = self._session.post(url=f"{CAMERA_WEBAPI_BASE}/api/dropcams.set_properties",
                 data={property: value, "uuid": device_id}, headers=headers
             )
 
