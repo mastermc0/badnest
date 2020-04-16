@@ -191,7 +191,7 @@ class NestAPI():
                 'User-Agent': USER_AGENT,
                 'X-Requested-With': 'XmlHttpRequest',
                 'Referer': 'https://home.nest.com/',
-                'cookie': f"cztoken={self._access_token}"
+                'cookie': f"user_token={self._access_token}"
             }
             r = self._session.get(url=f"{CAMERA_WEBAPI_BASE}/api/cameras.get_with_properties?uuid="+camera                                  
                                   , headers=headers)
