@@ -23,7 +23,7 @@ async def async_setup_platform(hass,
     api = hass.data[DOMAIN]['api']
 
     cameras = []
-    _LOGGER.info("Adding temperature sensors")
+    _LOGGER.info("Adding cameras")
     for camera in api['cameras']:
         _LOGGER.info(f"Adding nest camera uuid: {camera}")
         cameras.append(NestCamera(camera, api))
