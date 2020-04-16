@@ -194,7 +194,7 @@ class NestAPI():
                 'cookie': f"cztoken={self._access_token}"
             }
             r = self._session.get(url=f"{API_URL}/dropcam/api/cameras/{camera}", headers=headers)
-            sensor_data = r.json()[0]
+            sensor_data = r.json()["items"]
             self.device_data[camera]['name'] = \
                 sensor_data["name"]
             self.device_data[camera]['is_online'] = \
